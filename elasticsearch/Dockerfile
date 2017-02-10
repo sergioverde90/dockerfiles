@@ -7,12 +7,11 @@ RUN useradd -G sudo elasticsearch
 
 WORKDIR ${INSTALL_DIR}
 
-COPY elasticsearch-${VERSION}.zip ${INSTALL_DIR}
-
 # get elasticsearch and unzip
-RUN apt-get install unzip \
-	&& unzip elasticsearch-${VERSION}.zip -d ${INSTALL_DIR} \
+RUN apt-get install -y wget \
+	&& wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-${VERSION}.tar.gz \
 	# set permision over unzeip folder.// TODO Change this for permission over elasticsearch user in root group
+	&& tar -xvf elasticsearch-${VERSION}.tar.gz \
 	&& chmod -R 777 ${INSTALL_DIR}
 	
 COPY elasticsearch.yml elasticsearch-${VERSION}/config
