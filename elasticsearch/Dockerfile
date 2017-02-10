@@ -18,3 +18,5 @@ COPY elasticsearch.yml elasticsearch-${VERSION}/config
 USER elasticsearch
 
 ENTRYPOINT ${INSTALL_DIR}/elasticsearch-${VERSION}/bin/elasticsearch
+
+EXPOSE 9200 9300
