@@ -56,7 +56,7 @@ shppa9h4wi7k  elasticstack_nginx  replicated  1/1       nginx:1
 ```bash
 docker logs elasticstack_el.2.{GENERATED_ID}
 ```
-you will see simething like this
+you will see something like this
 ```bash
 [2017-03-04 19:42:23,003][INFO ][cluster.service] [Angela Del Toro] detected_master {Iron Monger}{Sc-o1kPKSeaNTL4b69x64Q}{10.0.0.2}{10.0.0.2:9300}, added {{Iron Monger}{Sc-o1kPKSeaNTL4b69x64Q}{10.0.0.2}{10.0.0.2:9300},}, reason: zen-disco-receive(from master [{Iron Monger}{Sc-o1kPKSeaNTL4b69x64Q}{10.0.0.2}{10.0.0.2:9300}])
 ```
