@@ -1,25 +1,11 @@
 version: '2'
 services:
  node1:
-   image: elasticsearch
+   build: .
    container_name: elastic1
    ports:
     - "9200:9200"
     - "9300:9300"
-   networks:
-    - blog
  node2:
-   image: elasticsearch
+   build: .
    container_name: elastic2
-   ports:
-    - "9201:9200"
-    - "9301:9300"
-   depends_on:
-    - node1
-   networks:
-    - blog
-networks:
- blog:
-  external:
-   name: blog
-
