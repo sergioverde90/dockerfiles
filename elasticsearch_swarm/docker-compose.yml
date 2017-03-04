@@ -1,0 +1,18 @@
+version: '3'
+services:
+ el:
+   image: elasticstack
+ nginx:
+   image: 'nginx:1'
+   ports:
+    - '9200:9200'
+   command: |
+     /bin/bash -c "echo '
+     server {
+        listen 9200;
+        location / {
+            proxy_pass http://el:9200;
+            proxy_set_header Host $$host;
+            proxy_set_header X-Real-IP $$remote_addr;
+        }
+      }' > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
