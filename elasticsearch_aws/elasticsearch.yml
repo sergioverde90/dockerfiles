@@ -1,0 +1,9 @@
+cloud.aws.region: eu-west-1
+cloud.aws.access_key: ACCESS_KEY (change it)
+cloud.aws.secret_key: SECRET KEY (change it)
+discovery.type: ec2
+discovery.type.ec2.groups: GROUP-ID or GROUP-NAME (change it)
+# discovery.type.ec2.host_type: private_ip
+discovery.zen.ping.multicast.enabled: false
+network.publish_host: _ec2:privateIp_
+network.host: 0.0.0.0
