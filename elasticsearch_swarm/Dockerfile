@@ -15,7 +15,9 @@ RUN apt-get install -y wget \
 	&& rm -fr elasticsearch-${VERSION}.tar.gz \
 	&& mv ./elasticsearch-${VERSION} ${INSTALL_DIR}/elasticsearch \ 
 	&& chmod -R 777 ${INSTALL_DIR}
-	
+
+RUN ${INSTALL_DIR}/elasticsearch/bin/plugin install cloud-aws --batch
+
 COPY elasticsearch.yml ${INSTALL_DIR}/elasticsearch/config
 USER elasticsearch
 
