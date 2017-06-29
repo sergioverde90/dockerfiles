@@ -2,6 +2,8 @@ version: '3'
 services:
  el:
    image: elasticstack
+   volumes:
+    - /vagrant/volumes/elasticsearch:/usr/share/elasticsearch/data
  nginx:
    image: 'nginx:1'
    ports:
@@ -16,3 +18,9 @@ services:
             proxy_set_header X-Real-IP $$remote_addr;
         }
       }' > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+ front:
+  image: 'httpd:2.4'
+  ports:
+   - '9090:80'
+  volumes:
+   - /vagrant/volumes/apache:/usr/local/apache2/htdocs/

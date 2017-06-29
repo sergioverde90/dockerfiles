@@ -1,0 +1,9 @@
+version: '3'
+services:
+ hadoop:
+  build: .
+  volumes:
+   - '/vagrant/volumes/hadoop-config/core-site.xml:/hadoop-2.8.0/etc/hadoop/core-site.xml'
+   - '/vagrant/volumes/hadoop-config/hdfs-site.xml:/hadoop-2.8.0/etc/hadoop/hdfs-site.xml'
+   - '/vagrant/volumes/hadoop-config/yarn-site.xml:/hadoop-2.8.0/etc/hadoop/yarn-site.xml'
+   - '/vagrant/volumes/hadoop-config/mapred-site.xml:/hadoop-2.8.0/etc/hadoop/mapred-site.xml'
