@@ -9,4 +9,6 @@ start-dfs.sh
 start-yarn.sh
 mr-jobhistory-daemon.sh start historyserver
 
-curl http://localhost:50070
+if [[ $1 == "-d" ]]; then
+  while true; do sleep 1000; done
+fi
