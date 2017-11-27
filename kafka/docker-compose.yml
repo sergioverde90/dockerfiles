@@ -10,5 +10,5 @@ services:
   depends_on:
    - zookeeper
  zookeeper:
-  build: ./zookeeper
+  build: ../zookeeper
   hostname: zookeeper
