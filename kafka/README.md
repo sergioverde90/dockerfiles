@@ -1,7 +1,7 @@
 docker-compose with two services:
 
 * kafka (image based on: [wurstmeister/kafka-docker](https://github.com/wurstmeister/kafka-docker))
-* zookeeper (image based on [Dockerhub zookeeper](https://hub.docker.com/_/zookeeper/)) 
+* zookeeper (custom image [zookeeper](https://github.com/sergioverde90/dockerfiles/tree/master/zookeeper)) 
 
 # HOW TO RUN
 ```bash
