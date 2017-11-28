@@ -35,7 +35,7 @@ ab08g1gueo5i  kafka_zookeeper  replicated  1/1       kafka_zookeeper
 > docker exec -it kafka_zookeeper.1.... /bin/bash
 'root@zookeeper:#' /zookeeper/bin/zkCli.sh 127.0.0.1:2181
 
-[zk: 127.0.0.1:2181(CONNECTED) 0] ls /ls /brokers/ids
+[zk: 127.0.0.1:2181(CONNECTED) 0] ls /brokers/ids
 [1002, 1001] # two brokers
 ```
 
