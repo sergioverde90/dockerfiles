@@ -12,3 +12,6 @@ services:
  zookeeper:
   build: ../zookeeper
   hostname: zookeeper
+  ports:
+   - '2181:2181'
+  
